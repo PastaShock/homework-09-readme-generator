@@ -1,18 +1,27 @@
 
 # inquirer-test
 ![profile picture](https://github.com/pastashock.png?size=80)
+
 created by: pastashock
+
 reach me: georgepastushok@gmail.com
+
 github pages: 
+
 github URL: https://github.com/PastaShock/homework-09-readme-generator
 
 
 ## Table of Contents
 [about](#about)
+
 [Installation](#Installation)
+
 [usage](#Usage)
+
 [contribution](#Contribution)
+
 [testing](#testing)
+
 [license](#license)
 
 ## About
@@ -41,6 +50,6 @@ contact me to contribute
 jest
 
 ## License
-https://img.shields.io/badge/license-wtf-grey
+![license](https://img.shields.io/badge/license-wtf-grey)
 
     
