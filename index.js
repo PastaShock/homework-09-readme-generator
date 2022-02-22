@@ -83,27 +83,31 @@ const prompts = [
 inquirer.prompt(prompts).then((answers) => {
     answersObj = JSON.stringify(answers, null, '   ');
     console.log(answersObj);
-});
 
-const mdTemplate = `
+    fs.writeFile('README.md', `
 # ${answers.projTitle}
-    created by: ${answers.ghUserName}
-    reach me: ${answers.emailAdd}
+created by: ${answers.ghUserName}
+reach me: ${answers.emailAdd}
 
 ## Installation instructions:
-    ${answers.installInst}
+${answers.installInst}
 
 ## Use this project to:
-    ${answers.usageInfo}
+${answers.usageInfo}
 
 ## How to contribute
-    ${answers.contribution}
+${answers.contribution}
 
 ## testing
-    ${answers.testInst}
+${answers.testInst}
 
 ## license
-    ${answers.license}
+${answers.license}
 
-`
+    `,
+     (err) => {
+         if (err) throw err;
+         console.log('the file has been saved');
+     })});
+
 
