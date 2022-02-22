@@ -18,66 +18,71 @@ const prompts = [
         type: 'input',
         name: 'projTitle',
         message: 'What is the title of your project?',
-        // action: () => {
-        //     answers.projTitle
-        // }
+    },
+    {
+        type: 'input',
+        name: 'why',
+        message: 'Why did you build this project',
+    },
+    {
+        type: 'input',
+        name: 'problem',
+        message: 'What problem does this app solve?',
+    },
+    {
+        type: 'input',
+        name: 'standout',
+        message: 'What makes this project standout?',
     },
     {
         type: 'input',
         name: 'installInst',
         message: 'How is your project going to be installed?',
-        // action: () => {
-        //     answers => { console.info('Answer:', answers.projTitle); }
-        // }
     },
     {
         type: 'input',
         name: 'usageInfo',
         message: 'How is your project going to be used?',
-        // action: () => {
-        //     answers => { console.info('Answer:', answers.projTitle); }
-        // }
     },
     {
         type: 'input',
         name: 'contribution',
         message: 'How should users contribute to this project?',
-        // action: () => {
-        //     answers => { console.info('Answer:', answers.projTitle); }
-        // }
     },
     {
         type: 'input',
         name: 'testInst',
         message: 'How is this app going to be tested?',
-        // action: () => {
-        //     answers => { console.info('Answer:', answers.projTitle); }
-        // }
     },
     {
         type: 'input',
         name: 'license',
         message: 'What license is this project going to use?',
         default: 'wtf',
-        // action: () => {
-        //     answers => { console.info('Answer:', answers.projTitle); }
+        // Add function that takes the input from this question and matches it to a license from a list.
+        // action: (answers) => {
+        //   license = nodeApp(this).matchToList(listOfLicenses)
         // }
     },
     {
         type: 'input',
         name: 'ghUserName',
         message: 'What is your github user name?',
-        // action: () => {
-        //     answers => { console.info('Answer:', answers.projTitle); }
-        // }
     },
     {
         type: 'input',
         name: 'emailAdd',
         message: 'What is your email address?',
-        // action: () => {
-        //     answers => { console.info('Answer:', answers.projTitle); }
-        // }
+    },
+    {
+        type: 'input',
+        name: 'ghUrl',
+        message: 'What is the URL of your repo?'
+    },
+    {
+        type: 'input',
+        name: 'ghPages',
+        message: 'What is the URL of your hosted page?',
     }
 ]
 inquirer.prompt(prompts).then((answers) => {
@@ -86,23 +91,48 @@ inquirer.prompt(prompts).then((answers) => {
 
     fs.writeFile('README.md', `
 # ${answers.projTitle}
+![profile picture](https://github.com/${answers.ghUserName}.png?size=80)
 created by: ${answers.ghUserName}
 reach me: ${answers.emailAdd}
+github pages: ${answers.ghPages}
+github URL: ${answers.ghUrl}
 
-## Installation instructions:
+
+## Table of Contents
+[about](#about)
+[Installation](#Installation)
+[usage](#Usage)
+[contribution](#Contribution)
+[testing](#testing)
+[license](#license)
+
+## About
+
+### Why did I make this project?
+${answers.why}
+
+![screenshot of the app](assets/screenshot.png)
+
+### What problem does this app solve?
+${answers.problem}
+
+### What makes this app standout?
+${answers.standout}
+
+## Installation
 ${answers.installInst}
 
-## Use this project to:
+## Usage
 ${answers.usageInfo}
 
-## How to contribute
+## Contribution
 ${answers.contribution}
 
-## testing
+## Testing
 ${answers.testInst}
 
-## license
-${answers.license}
+## License
+https://img.shields.io/badge/license-${answers.license}-grey
 
     `,
      (err) => {
