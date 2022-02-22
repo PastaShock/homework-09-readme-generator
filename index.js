@@ -92,18 +92,27 @@ inquirer.prompt(prompts).then((answers) => {
     fs.writeFile('README.md', `
 # ${answers.projTitle}
 ![profile picture](https://github.com/${answers.ghUserName}.png?size=80)
+
 created by: ${answers.ghUserName}
+
 reach me: ${answers.emailAdd}
+
 github pages: ${answers.ghPages}
+
 github URL: ${answers.ghUrl}
 
 
 ## Table of Contents
 [about](#about)
+
 [Installation](#Installation)
+
 [usage](#Usage)
+
 [contribution](#Contribution)
+
 [testing](#testing)
+
 [license](#license)
 
 ## About
@@ -132,7 +141,7 @@ ${answers.contribution}
 ${answers.testInst}
 
 ## License
-https://img.shields.io/badge/license-${answers.license}-grey
+![license](https://img.shields.io/badge/license-${answers.license}-grey)
 
     `,
      (err) => {
