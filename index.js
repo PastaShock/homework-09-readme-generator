@@ -1,5 +1,6 @@
 // take input from the user in the command line
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 // ask for project title
 // ask for description
@@ -80,5 +81,29 @@ const prompts = [
     }
 ]
 inquirer.prompt(prompts).then((answers) => {
-    console.log(JSON.stringify(answers, null, '   '));
+    answersObj = JSON.stringify(answers, null, '   ');
+    console.log(answersObj);
 });
+
+const mdTemplate = `
+# ${answers.projTitle}
+    created by: ${answers.ghUserName}
+    reach me: ${answers.emailAdd}
+
+## Installation instructions:
+    ${answers.installInst}
+
+## Use this project to:
+    ${answers.usageInfo}
+
+## How to contribute
+    ${answers.contribution}
+
+## testing
+    ${answers.testInst}
+
+## license
+    ${answers.license}
+
+`
+
