@@ -205,7 +205,7 @@ const prompts = [
 inquirer.prompt(prompts).then((answers) => {
     answersObj = JSON.stringify(answers, null, '   ');
     console.log(answersObj);
-    console.log(licenseSel, '\n', answers.license)
+    // console.log(licenseSel, '\n', answers.license)
 
     fs.writeFile('README.md', `
 ${answers.license}
