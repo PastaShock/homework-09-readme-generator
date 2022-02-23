@@ -1,6 +1,6 @@
 
-![license](https://img.shields.io/badge/license-The Do What the Fuck You Want to Public License-grey)
-# Inquirer-test
+undefined
+# inquirer-test
 ![profile picture](https://github.com/pastashock.png?size=80)
 
 created by: pastashock
@@ -13,17 +13,12 @@ github URL: https://github.com/PastaShock/homework-09-readme-generator
 
 
 ## Table of Contents
-[about](#about)
-
-[Installation](#Installation)
-
-[usage](#Usage)
-
-[contribution](#Contribution)
-
-[testing](#testing)
-
-[license](#license)
+- [about](#about)
+- [Installation](#Installation)
+- [usage](#Usage)
+- [contribution](#Contribution)
+- [testing](#testing)
+- [license](#license)
 
 ## About
 
@@ -31,9 +26,6 @@ github URL: https://github.com/PastaShock/homework-09-readme-generator
     This app allows me to create a readme by going through a series of pre-set questions that cover most projects
 
 ![screenshot of the app](assets/screenshot.png)
-
-### What problem does this app solve?
-    undefined
 
 ### What makes this app standout?
     This project standsout because it makes use of extensive markdown syntax, clever use of inquirer and licenses
@@ -51,6 +43,7 @@ github URL: https://github.com/PastaShock/homework-09-readme-generator
     jest index.js
 
 ## License
-(answers.license) => {}
+    This project is using undefined
+    undefined
 
     

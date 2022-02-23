@@ -16,67 +16,67 @@ const fs = require('fs');
 const licenses = [
     apache2 = {
         name: 'apache 2.0',
-        badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+        value: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
     },
     boost = {
         name: 'boost 1.0',
-        badge: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
+        value: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
     },
     bsd3 = {
          name: 'BSD 3-Clause',
-         badge: '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+         value: '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
      },
     bsd2 = {
          name: 'BSD 2-Clause License',
-         badge: '[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)'
+         value: '[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)'
      },
     cc0 = {
          name: 'CC0',
-         badge: '[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)'
+         value: '[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)'
      },
     ccBy4 = {
          name: 'Attribution 4.0 International',
-         badge: '[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)'
+         value: '[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)'
      },
     ccNc = {
          name: 'Attribution-NonCommmercial-ShareAlike 4.0 International',
-         badge: '[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)'
+         value: '[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)'
      },
     ccBa = {
          name: 'Attribution-NonCommercial-NoDerivatives 4.0 International',
-         badge: '[![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)'
+         value: '[![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)'
      },
     gnu3 = {
          name: 'GNU GPL v3',
-         badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+         value: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
      },
     hippo = {
          name: 'The Hippocratic License 3.0',
-         badge: '[![License: Hippocratic 3.0](https://img.shields.io/badge/License-Hippocratic_3.0-lightgrey.svg)](https://firstdonoharm.dev)'
+         value: '[![License: Hippocratic 3.0](https://img.shields.io/badge/License-Hippocratic_3.0-lightgrey.svg)](https://firstdonoharm.dev)'
      },
     ibm = {
          name: 'IBM Public License Version 1.0',
-         badge: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
+         value: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
      },
     mit = {
          name: 'The MIT License',
-         badge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+         value: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
      },
     mpl = {
          name: 'Mozilla Public License 2.0',
-         badge: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+         value: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
      },
     attribution = {
          name: 'Attribution License (BY)',
-         badge: '[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)'
+         value: '[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)'
      },
     pddl = {
          name: 'Public Domain Dedication and License (PDDL)',
-         badge: '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)'
+         value: '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)'
      },
     wtfpl = {
          name: 'The Do What the Fuck You Want to Public License',
-         badge: '[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)'
+         value: '[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)'
      }
 ]
 
@@ -199,27 +199,16 @@ const prompts = [
         name: 'license',
         message: 'What license is this project going to use?',
         default: 'wtf',
-        choices: licenses,
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Please select a license');
-                return false;
-            }
-        }
-        // Add function that takes the input from this question and matches it to a license from a list.
-        // action: (answers) => {
-        //   license = nodeApp(this).matchToList(listOfLicenses)
-        // }
+        choices: licenses
     }
 ]
 inquirer.prompt(prompts).then((answers) => {
     answersObj = JSON.stringify(answers, null, '   ');
     console.log(answersObj);
+    console.log(licenseSel, '\n', answers.license)
 
     fs.writeFile('README.md', `
-${answers.license.badge}
+${answers.license}
 # ${answers.projTitle}
 ![profile picture](https://github.com/${answers.ghUserName}.png?size=80)
 
@@ -251,7 +240,7 @@ github URL: ${answers.ghUrl}
     ${answers.standout}
 
 ## Installation
-    ${answers.installInst}
+    \`\`\`${answers.installInst}\`\`\`
 
 ## Usage
     ${answers.usageInfo}
@@ -263,8 +252,8 @@ github URL: ${answers.ghUrl}
     ${answers.testInst}
 
 ## License
-    This project is using ${answers.license.name}
-    ${answers.license.badge}
+    This project is using ${answers.license}
+    ${answers.license.value}
 
     `,
         (err) => {
