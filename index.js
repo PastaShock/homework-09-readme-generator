@@ -232,28 +232,28 @@ github URL: ${answers.ghUrl}
 ## About
 
 ### Why did I make this project?
-    ${answers.why}
+${answers.why}
 
 ![screenshot of the app](assets/screenshot.png)
 
 ### What makes this app standout?
-    ${answers.standout}
+${answers.standout}
 
 ## Installation
-    \`\`\`${answers.installInst}\`\`\`
+\`\`\`${answers.installInst}\`\`\`
 
 ## Usage
-    ${answers.usageInfo}
+
+${answers.usageInfo}
 
 ## Contribution
-    ${answers.contribution}
+${answers.contribution}
 
 ## Testing
-    ${answers.testInst}
+\`\`\`${answers.testInst}\`\`\`
 
 ## License
-    This project is using ${answers.license}
-    ${answers.license.value}
+This project is using ${answers.license}
 
     `,
         (err) => {
