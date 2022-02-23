@@ -21,6 +21,26 @@ const prompts = [
     },
     {
         type: 'input',
+        name: 'ghUserName',
+        message: 'What is your github user name?',
+    },
+    {
+        type: 'input',
+        name: 'emailAdd',
+        message: 'What is your email address?',
+    },
+    {
+        type: 'input',
+        name: 'ghUrl',
+        message: 'What is the URL of your repo?'
+    },
+    {
+        type: 'input',
+        name: 'ghPages',
+        message: 'What is the URL of your hosted page?',
+    },
+    {
+        type: 'input',
         name: 'why',
         message: 'Why did you build this project',
     },
@@ -63,26 +83,6 @@ const prompts = [
         // action: (answers) => {
         //   license = nodeApp(this).matchToList(listOfLicenses)
         // }
-    },
-    {
-        type: 'input',
-        name: 'ghUserName',
-        message: 'What is your github user name?',
-    },
-    {
-        type: 'input',
-        name: 'emailAdd',
-        message: 'What is your email address?',
-    },
-    {
-        type: 'input',
-        name: 'ghUrl',
-        message: 'What is the URL of your repo?'
-    },
-    {
-        type: 'input',
-        name: 'ghPages',
-        message: 'What is the URL of your hosted page?',
     }
 ]
 inquirer.prompt(prompts).then((answers) => {
